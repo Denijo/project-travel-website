@@ -1,0 +1,23 @@
+@use "../abstracts/variables";
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-default{
+    background:  linear-gradient(to right, variables.$main1, variables.$main2);
+    color: variables.$white;
+    text-decoration: none;
+    height: 4.5rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    padding: 0 2rem;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}

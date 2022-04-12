@@ -1,9 +1,16 @@
-import React from 'react'
-
+import React, { useState } from "react";
+import Header from "../components/Header";
 export default function Home() {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    )
+  const [state] = useState({
+    heading: "We are travel friends",
+    paragraph:
+      " Come and join us we travel the most and beautiful places in the world",
+  });
+  return (
+    <>
+      <Header heading={state.heading} paragraph={state.paragraph}>
+        <button className="btn-default">Get Started</button>
+      </Header>
+    </>
+  );
 }
