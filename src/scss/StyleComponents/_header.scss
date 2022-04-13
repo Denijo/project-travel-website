@@ -6,7 +6,15 @@
   height: 100vh;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
-
+  &__logo {
+    @include mixins.position(absolute, 2rem, 0, null, null, null, null);
+    z-index: 1;
+    img{
+      width: 15rem;
+      height: auto;
+      object-fit: cover;
+    }
+  }
   &__video {
     @include mixins.position(absolute, 0, 0, null, null, 100%, 100%);
     overflow: hidden;
@@ -26,11 +34,17 @@
         font-weight: 900;
         font-size: 4rem;
         line-height: 2.7rem;
+        @include mixins.animation(heading, 1s, ease-in, -8rem, 0);
       }
-      .contentSubtitle{
-          margin-top: .7rem;
-          color: variables.$white;
-          font-size: 1.5 rem;
+      .contentSubtitle {
+        margin-top: 1em;
+        color: variables.$white;
+        font-size: 1.5 rem;
+        @include mixins.animation(subHeading, 1s, ease-out, -10rem, 0);
+      }
+      .contentLink {
+        margin-top: 1rem;
+        @include mixins.animation(headerButton, 1s, ease-out, 0, 0);
       }
     }
   }

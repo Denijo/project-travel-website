@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
+import Modal from "../components/Modal";
 export default function Home() {
   const [state] = useState({
     heading: "We are travel friends",
@@ -11,6 +12,7 @@ export default function Home() {
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button className="btn-default">Get Started</button>
       </Header>
+      <Modal />
     </>
   );
 }
